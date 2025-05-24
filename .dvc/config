@@ -1,7 +1,4 @@
 [core]
     analytics = false
-    remote = mylocalremote
 ['remote "myremote"']
     url = gdrive://1zu5CwBel7dLVQlELu7WBU7P1B5I5e6zL
-['remote "mylocalremote"']
-    url = /Users/maotek/remotedvc
