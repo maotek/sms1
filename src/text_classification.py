@@ -24,13 +24,20 @@ def my_train_test_split(*datasets):
     '''
     Split dataset into training and test sets. We use a 70/30 split.
     '''
-    return train_test_split(*datasets, test_size=0.3, random_state=101)
+    return train_test_split(*datasets, test_size=0.3, random_state=102)
 
 def train_classifier(classifier, X_train, y_train):
     classifier.fit(X_train, y_train)
 
 def predict_labels(classifier, X_test):
     return classifier.predict(X_test)
+# SVM                      0.864167
+# Decision Tree            0.953333
+# Multinomial NB           0.864167
+# KNN                      0.908333
+# Random Forest            0.965000
+# AdaBoost                 0.962500
+# Bagging Classifier       0.957500
 
 def main():
 
