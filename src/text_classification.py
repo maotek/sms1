@@ -14,6 +14,7 @@ from joblib import dump, load
 import matplotlib
 import matplotlib.pyplot as plt
 from text_preprocessing import _load_data
+import json
 
 #matplotlib.use('TkAgg')
 pd.set_option('display.max_colwidth', None)
@@ -90,6 +91,14 @@ def main():
 
     # Store "best" classifier
     dump(classifiers['Decision Tree'], 'output/model.joblib')
+
+    # Find the classifier with the highest accuracy
+    best_classifier_name = max(pred_scores, key=lambda k: pred_scores[k][0])
+    best_accuracy = pred_scores[best_classifier_name][0]
+
+    # Store accuracy in a JSON file (for DVC)
+    with open("metrics.json", "w") as f:
+        json.dump({"accuracy": best_accuracy}, f)
 
 if __name__ == "__main__":
     main()

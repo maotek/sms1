@@ -18,3 +18,5 @@ stages:
       - src/text_classification.py
     outs:
       - output/model.joblib
+    metrics:
+      - metrics.json
