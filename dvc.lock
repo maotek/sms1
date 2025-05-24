@@ -39,5 +39,5 @@ stages:
     outs:
     - path: output/model.joblib
       hash: md5
-      md5: 851a983590c2dd48940b0a53e7be055e
-      size: 15225
+      md5: 388b9e9da240c8a7e17722d21665ac87
+      size: 15001
