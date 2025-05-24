@@ -23,12 +23,12 @@ stages:
     outs:
     - path: output/preprocessed_data.joblib
       hash: md5
-      md5: 17b75ae5788a47bca7f6888154f2947e
-      size: 251348
+      md5: e3d228ca3435939557e707fb93b5854c
+      size: 374924
     - path: output/preprocessor.joblib
       hash: md5
-      md5: 83a6cbde454b42ee4be7cbfe54ebd638
-      size: 128457
+      md5: 65d0c63260ba21c21a12c0a32ae7595e
+      size: 162649
   train:
     cmd: python src/text_classification.py
     deps:
@@ -39,5 +39,5 @@ stages:
     outs:
     - path: output/model.joblib
       hash: md5
-      md5: 8857bf64bd9720b2c53df5e83bfa7c67
-      size: 10681
+      md5: e1079d17f29c71df582c67493761a414
+      size: 12345
